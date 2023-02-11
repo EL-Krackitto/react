@@ -1,16 +1,20 @@
 import React from 'react'
-import Address from './Component/Profile/Address'
-import FullName from './Component/Profile/FullName'
-import ProfilePhoto from './Component/Profile/ProfilePhoto'
-
+import Profile from './Profile/Component/Profile'
 
 function App() {
+  function handleName(fullName) {
+    alert(fullName);
+  }
   return (
     <div>
-<ProfilePhoto/>
-<FullName/>
-<Address/>
+      <Profile
+       fullName={"Samir"} profession={false} bio={"aaa"} handleName={handleName}>
+      <img src="https://cdn-icons-png.flaticon.com/512/6840/6840478.png"
+      alt = "Profile"
+      />
+      </Profile>
     </div>
   )
 }
+
 export default App
